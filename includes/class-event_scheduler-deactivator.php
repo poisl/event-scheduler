@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Fired during plugin deactivation
+ *
+ * @link       https://profiles.wordpress.org/poisl
+ * @since      1.0.0
+ *
+ * @package    Event_scheduler
+ * @subpackage Event_scheduler/includes
+ */
+
+/**
+ * Fired during plugin deactivation.
+ *
+ * This class defines all code necessary to run during the plugin's deactivation.
+ *
+ * @since      1.0.0
+ * @package    Event_scheduler
+ * @subpackage Event_scheduler/includes
+ * @author     Thomas Poisl <thomas@poisl.org>
+ */
+class Event_scheduler_Deactivator
+{
+
+    /**
+     * Short Description. (use period)
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function deactivate()
+    {
+    }
+
+}
