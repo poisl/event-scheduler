@@ -1,254 +1,251 @@
 # Copyright (C) 2018 Event Scheduler
 # This file is distributed under the same license as the Event Scheduler package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Event Scheduler 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/event-scheduler\n"
-"POT-Creation-Date: 2018-02-11 17:00+0100\n"
+"POT-Creation-Date: 2018-02-11 19:17:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: Poedit 2.0.6\n"
 
 #: admin/class-event-scheduler-admin.php:124
 msgid "Event Scheduler - Configuration"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:31
+#: admin/partials/event-scheduler-admin-display.php:46
 msgid "Event start date (Y-m-d), e.g. 2016-01-15"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:44
+#: admin/partials/event-scheduler-admin-display.php:59
 msgid "Event start time (H:M), e.g. 20:00"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:57
+#: admin/partials/event-scheduler-admin-display.php:72
 msgid "Event end time (H:M), e.g. 22:00"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:70
+#: admin/partials/event-scheduler-admin-display.php:85
 msgid "Event is repeated after amount of weeks specified here, e.g. 1"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:85
+#: admin/partials/event-scheduler-admin-display.php:100
 msgid "Event location, e.g. gym"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:100
+#: admin/partials/event-scheduler-admin-display.php:115
 msgid "Optional alternative event location, e.g. sports ground"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:112
+#: admin/partials/event-scheduler-admin-display.php:127
 msgid "The settings from here are all used for email notifications. You can setup a cron schedule with the hook \"event_scheduler_mail_notification\" to automate the notification process."
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:120
+#: admin/partials/event-scheduler-admin-display.php:135
 msgid "Full URL with trailing slash to the page where you have included your event list"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:135
+#: admin/partials/event-scheduler-admin-display.php:150
 msgid "Email subject for the email notification, e.g. Event notification"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:150
+#: admin/partials/event-scheduler-admin-display.php:165
 msgid "Email body for the email notification"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:156
+#: admin/partials/event-scheduler-admin-display.php:171
 msgid "HTML-Tags and the following dynamic variables can be used"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:164
+#: admin/partials/event-scheduler-admin-display.php:179
 msgid "Save all changes"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:168
+#: admin/partials/event-scheduler-admin-display.php:183
 msgid "You can use the following shortcodes on pages"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:171
+#: admin/partials/event-scheduler-admin-display.php:186
 msgid "Lists the current event, so website members can join or decline it"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:174
+#: admin/partials/event-scheduler-admin-display.php:189
 msgid "Statistics for past events"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:176
+#: admin/partials/event-scheduler-admin-display.php:191
 msgid "Manage upcoming holiday, when no events will take place"
 msgstr ""
 
-#: admin/partials/event-scheduler-admin-display.php:179
+#: admin/partials/event-scheduler-admin-display.php:194
 msgid "List all active members"
 msgstr ""
 
-#: public/class-event-scheduler-public.php:170
+#: public/class-event-scheduler-public.php:172
 msgid "Please configure the plugin settings first."
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-admin-display.php:3
+#: public/partials/event-scheduler-public-event-list-admin-display.php:18
 msgid "Activate event"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-admin-display.php:5
+#: public/partials/event-scheduler-public-event-list-admin-display.php:20
 msgid "Change location"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-admin-display.php:7
+#: public/partials/event-scheduler-public-event-list-admin-display.php:22
 msgid "Deactivate event"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:4
+#: public/partials/event-scheduler-public-event-list-display.php:19
 msgid "Event is scheduled for"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:6
+#: public/partials/event-scheduler-public-event-list-display.php:21
 msgid "at"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:9
+#: public/partials/event-scheduler-public-event-list-display.php:24
 msgid "Event on"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:11
+#: public/partials/event-scheduler-public-event-list-display.php:26
 msgid "is canceled because"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:19
+#: public/partials/event-scheduler-public-event-list-display.php:34
 msgid "Accept"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:24
+#: public/partials/event-scheduler-public-event-list-display.php:39
 msgid "Decline"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:33
+#: public/partials/event-scheduler-public-event-list-display.php:48
 msgid "Last event"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:34
+#: public/partials/event-scheduler-public-event-list-display.php:49
 msgid "Current event"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:35
+#: public/partials/event-scheduler-public-event-list-display.php:50
 msgid "Next event"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:44
+#: public/partials/event-scheduler-public-event-list-display.php:59
 msgid "Participants accepted"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:59
+#: public/partials/event-scheduler-public-event-list-display.php:74
 msgid "Participants declined"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:74
+#: public/partials/event-scheduler-public-event-list-display.php:89
 msgid "Participation unknown"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-list-display.php:88
-#: public/partials/event-scheduler-public-event-statistics-display.php:47
-#: public/partials/event-scheduler-public-holiday-admin-display.php:45
-#: public/partials/event-scheduler-public-holiday-display.php:28
-#: public/partials/event-scheduler-public-member-list-display.php:26
+#: public/partials/event-scheduler-public-event-list-display.php:103
+#: public/partials/event-scheduler-public-event-statistics-display.php:62
+#: public/partials/event-scheduler-public-holiday-admin-display.php:60
+#: public/partials/event-scheduler-public-holiday-display.php:43
+#: public/partials/event-scheduler-public-member-list-display.php:41
 msgid "Event Scheduler can only be used by active members."
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:6
+#: public/partials/event-scheduler-public-event-statistics-display.php:21
 msgid "Year"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:7
+#: public/partials/event-scheduler-public-event-statistics-display.php:22
 msgid "Events"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:8
+#: public/partials/event-scheduler-public-event-statistics-display.php:23
 msgid "Canceled events"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:9
+#: public/partials/event-scheduler-public-event-statistics-display.php:24
 msgid "Average accepts"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:10
+#: public/partials/event-scheduler-public-event-statistics-display.php:25
 msgid "Minimal accepts"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:11
+#: public/partials/event-scheduler-public-event-statistics-display.php:26
 msgid "Maximal accepts"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:12
+#: public/partials/event-scheduler-public-event-statistics-display.php:27
 msgid "Average declines"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:13
+#: public/partials/event-scheduler-public-event-statistics-display.php:28
 msgid "Minimal declines"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:14
+#: public/partials/event-scheduler-public-event-statistics-display.php:29
 msgid "Maximal declines"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:15
+#: public/partials/event-scheduler-public-event-statistics-display.php:30
 msgid "Top participants"
 msgstr ""
 
-#: public/partials/event-scheduler-public-event-statistics-display.php:43
+#: public/partials/event-scheduler-public-event-statistics-display.php:58
 msgid "No events existing."
 msgstr ""
 
-#: public/partials/event-scheduler-public-holiday-admin-display.php:3
+#: public/partials/event-scheduler-public-holiday-admin-display.php:18
 msgid "Create new holiday"
 msgstr ""
 
-#: public/partials/event-scheduler-public-holiday-admin-display.php:5
-#: public/partials/event-scheduler-public-holiday-admin-display.php:14
-#: public/partials/event-scheduler-public-holiday-display.php:6
+#: public/partials/event-scheduler-public-holiday-admin-display.php:20
+#: public/partials/event-scheduler-public-holiday-admin-display.php:29
+#: public/partials/event-scheduler-public-holiday-display.php:21
 msgid "Description"
 msgstr ""
 
-#: public/partials/event-scheduler-public-holiday-admin-display.php:6
-#: public/partials/event-scheduler-public-holiday-admin-display.php:15
-#: public/partials/event-scheduler-public-holiday-display.php:7
+#: public/partials/event-scheduler-public-holiday-admin-display.php:21
+#: public/partials/event-scheduler-public-holiday-admin-display.php:30
+#: public/partials/event-scheduler-public-holiday-display.php:22
 msgid "Begin"
 msgstr ""
 
-#: public/partials/event-scheduler-public-holiday-admin-display.php:7
-#: public/partials/event-scheduler-public-holiday-admin-display.php:16
-#: public/partials/event-scheduler-public-holiday-display.php:8
+#: public/partials/event-scheduler-public-holiday-admin-display.php:22
+#: public/partials/event-scheduler-public-holiday-admin-display.php:31
+#: public/partials/event-scheduler-public-holiday-display.php:23
 msgid "End"
 msgstr ""
 
-#: public/partials/event-scheduler-public-holiday-admin-display.php:8
+#: public/partials/event-scheduler-public-holiday-admin-display.php:23
 msgid "Create"
 msgstr ""
 
-#: public/partials/event-scheduler-public-holiday-admin-display.php:41
-#: public/partials/event-scheduler-public-holiday-display.php:24
+#: public/partials/event-scheduler-public-holiday-admin-display.php:56
+#: public/partials/event-scheduler-public-holiday-display.php:39
 msgid "No upcoming holidays exist."
 msgstr ""
 
-#: public/partials/event-scheduler-public-member-list-display.php:9
+#: public/partials/event-scheduler-public-member-list-display.php:24
 msgid "Email"
 msgstr ""
 
-#: public/partials/event-scheduler-public-member-list-display.php:11
+#: public/partials/event-scheduler-public-member-list-display.php:26
 msgid "Birthday"
 msgstr ""
 
-#: public/partials/event-scheduler-public-member-list-display.php:14
+#: public/partials/event-scheduler-public-member-list-display.php:29
 msgid "Phone"
 msgstr ""
 
-#: public/partials/event-scheduler-public-member-list-display.php:22
+#: public/partials/event-scheduler-public-member-list-display.php:37
 msgid "No active members exist."
 msgstr ""
-
 #. Plugin Name of the plugin/theme
 msgid "Event Scheduler"
 msgstr ""
