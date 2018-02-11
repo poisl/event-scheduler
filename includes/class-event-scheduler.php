@@ -139,7 +139,7 @@ class Event_Scheduler {
 
 		$plugin_i18n = new Event_Scheduler_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'event_scheduler_load_plugin_textdomain' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
 	}
 
