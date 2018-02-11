@@ -153,7 +153,7 @@
                     <textarea class="large-text code" id="<?php echo $this->plugin_name; ?>event_notification_body"
                               name="<?php echo $this->plugin_name; ?>[event_notification_body]" rows="6" cols="20"
                               required><?php if (!empty($event_notification_body)) echo $event_notification_body; ?></textarea>
-                    <p class="description"><?php _e('HTML-Tags and the following dynamic variables can be used:', 'event_scheduler'); ?>
+                    <p class="description"><?php _e('HTML-Tags and the following dynamic variables can be used', 'event_scheduler'); ?>:
                         ###name###, ###eventdate###, ###eventtime###, ###eventlocation###, ###acceptlink###,
                         ###cancellink###
                     </p>
