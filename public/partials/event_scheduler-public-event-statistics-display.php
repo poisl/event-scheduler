@@ -1,5 +1,6 @@
 <?php if (is_user_logged_in()) : ?>
 
+    <?php if ($statistics): ?>
     <table>
         <tr>
             <td><?php _e('Year','event_scheduler');?></td>
@@ -37,6 +38,10 @@
             ?>
         <?php endif; ?>
     </table>
+
+    <?php elseif (!$statistics) : ?>
+        <?php _e('No events existing.', 'event_scheduler');?></div>
+    <?php endif; ?>
 
 <?php else : ?>
     <div class="attention"><?php _e('Event Scheduler can only be used by active members.', 'event_scheduler');?></div>

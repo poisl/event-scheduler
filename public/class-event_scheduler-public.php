@@ -304,35 +304,39 @@ class Event_scheduler_Public
         $div = new Div($this->plugin_name, $this->version);
 
         $oldestEventYear = $div->getOldestEventYear();
-        $currentYear = date("Y");
 
-        $index = 0;
-        $statistics = array();
+        // Only make calculation if an event exists
+        if (!empty($oldestEventYear)) {
+            $currentYear = date("Y");
 
-        for ($i = $currentYear; $i >= $oldestEventYear; $i--) {
-            $year = $i;
+            $index = 0;
+            $statistics = array();
 
-            $statistics[$index]['year'] = $year;
+            for ($i = $currentYear; $i >= $oldestEventYear; $i--) {
+                $year = $i;
 
-            $statistics[$index]['activeEvents'] = count($div->findEventsOfYearByActive($year, '1'));
-            $statistics[$index]['inactiveEvents'] = count($div->findEventsOfYearByActive($year, '0'));
+                $statistics[$index]['year'] = $year;
 
-            $averageAccepts = $div->calculateAverageAcceptsPerEventByYear($year, '1');
-            $statistics[$index]['averageAccepts'] = $averageAccepts[0]->average;
-            $statistics[$index]['minimumAccepts'] = $averageAccepts[0]->minimum;
-            $statistics[$index]['maximumAccepts'] = $averageAccepts[0]->maximum;
+                $statistics[$index]['activeEvents'] = count($div->findEventsOfYearByActive($year, '1'));
+                $statistics[$index]['inactiveEvents'] = count($div->findEventsOfYearByActive($year, '0'));
 
-            $averageCancels = $div->calculateAverageAcceptsPerEventByYear($year, '0');
-            $statistics[$index]['averageCancels'] = $averageCancels[0]->average;
-            $statistics[$index]['minimumCancels'] = $averageCancels[0]->minimum;
-            $statistics[$index]['maximumCancels'] = $averageCancels[0]->maximum;
+                $averageAccepts = $div->calculateAverageAcceptsPerEventByYear($year, '1');
+                $statistics[$index]['averageAccepts'] = $averageAccepts[0]->average;
+                $statistics[$index]['minimumAccepts'] = $averageAccepts[0]->minimum;
+                $statistics[$index]['maximumAccepts'] = $averageAccepts[0]->maximum;
 
-            $tops = $div->topParticipantsByYear($year);
-            for ($j = 0; $j <= count($tops) - 1; $j++) {
-                $statistics[$index]['tops'][$j]['participantId'] = $tops[$j]->participantId;
-                $statistics[$index]['tops'][$j]['eventsAccepted'] = $tops[$j]->eventsAccepted;
+                $averageCancels = $div->calculateAverageAcceptsPerEventByYear($year, '0');
+                $statistics[$index]['averageCancels'] = $averageCancels[0]->average;
+                $statistics[$index]['minimumCancels'] = $averageCancels[0]->minimum;
+                $statistics[$index]['maximumCancels'] = $averageCancels[0]->maximum;
+
+                $tops = $div->topParticipantsByYear($year);
+                for ($j = 0; $j <= count($tops) - 1; $j++) {
+                    $statistics[$index]['tops'][$j]['participantId'] = $tops[$j]->participantId;
+                    $statistics[$index]['tops'][$j]['eventsAccepted'] = $tops[$j]->eventsAccepted;
+                }
+                $index++;
             }
-            $index++;
         }
 
         include_once('partials/event_scheduler-public-event-statistics-display.php');
