@@ -86,6 +86,30 @@ class Div
     }
 
     /**
+     * Checks how many days it is until the next event starts
+     *
+     * @return int $daysUntilNextEvent
+     */
+    public function daysUntilNextEvent()
+    {
+        // Initialize required plugin otions
+        $options = get_option($this->plugin_name);
+        $option_event_start_date = $options['event_start_date'];
+        $option_event_repeat_interval = $options['event_repeat_interval'];
+
+        $eventStartDate = new \DateTime(date('Y-m-d', strtotime($option_event_start_date)));
+        $today = new \DateTime(date('Y-m-d'));
+        $repeatEventInterval = $option_event_repeat_interval;
+
+        for ($nextDate = $eventStartDate; $nextDate < $today; $nextDate->modify("+" . $repeatEventInterval . " week")) {
+        }
+
+        $diff = $today->diff($nextDate);
+
+        return $diff->days;
+    }
+
+    /**
      * Returns the year of the oldest event
      *
      * @return int $year_of_oldest_event
@@ -120,7 +144,7 @@ class Div
             $end_of_year = new \DateTime('now');
         }
 
-        $events = $event_db->get_events(array('active' => $active, 'start' => array( 'start' => $start_of_year, 'end' => $end_of_year)));
+        $events = $event_db->get_events(array('active' => $active, 'start' => array('start' => $start_of_year, 'end' => $end_of_year)));
         return $events;
     }
 
@@ -151,30 +175,6 @@ class Div
 
         $events = $event_db->topParticipantsByYearFromDb($year);
         return $events;
-    }
-
-    /**
-     * Checks how many days it is until the next event starts
-     *
-     * @return int $daysUntilNextEvent
-     */
-    public function daysUntilNextEvent()
-    {
-        // Initialize required plugin otions
-        $options = get_option($this->plugin_name);
-        $option_event_start_date = $options['event_start_date'];
-        $option_event_repeat_interval = $options['event_repeat_interval'];
-
-        $eventStartDate = new \DateTime(date('Y-m-d', strtotime($option_event_start_date)));
-        $today = new \DateTime(date('Y-m-d'));
-        $repeatEventInterval = $option_event_repeat_interval;
-
-        for ($nextDate = $eventStartDate; $nextDate < $today; $nextDate->modify("+" . $repeatEventInterval . " week")) {
-        }
-
-        $diff = $today->diff($nextDate);
-
-        return $diff->days;
     }
 
     /**
@@ -466,7 +466,7 @@ class Div
             'start' => $holidayStartDate,
             'end' => $holidayEndDate,
         );
-        $holiday_db->insert($uid, $holiday);
+        $holiday_db->update($uid, $holiday);
     }
 
     /**

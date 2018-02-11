@@ -9,7 +9,8 @@ if (!defined('ABSPATH')) exit;
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @since       1.0.0
  */
-abstract class EsDb {
+abstract class EsDb
+{
 
     /**
      * The name of our database table
@@ -41,28 +42,8 @@ abstract class EsDb {
      * @access  public
      * @since   1.0.0
      */
-    public function __construct() {}
-
-    /**
-     * Whitelist of columns
-     *
-     * @access  public
-     * @since   1.0.0
-     * @return  array
-     */
-    public function get_columns() {
-        return array();
-    }
-
-    /**
-     * Default column values
-     *
-     * @access  public
-     * @since   1.0.0
-     * @return  array
-     */
-    public function get_column_defaults() {
-        return array();
+    public function __construct()
+    {
     }
 
     /**
@@ -73,9 +54,10 @@ abstract class EsDb {
      * @param $row_id
      * @return  object
      */
-    public function get( $row_id ) {
+    public function get($row_id)
+    {
         global $wpdb;
-        return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $this->table_name WHERE $this->primary_key = %s LIMIT 1;", $row_id ) );
+        return $wpdb->get_row($wpdb->prepare("SELECT * FROM $this->table_name WHERE $this->primary_key = %s LIMIT 1;", $row_id));
     }
 
     /**
@@ -87,10 +69,11 @@ abstract class EsDb {
      * @param $row_id
      * @return  object
      */
-    public function get_by( $column, $row_id ) {
+    public function get_by($column, $row_id)
+    {
         global $wpdb;
-        $column = esc_sql( $column );
-        return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $this->table_name WHERE $column = %s LIMIT 1;", $row_id ) );
+        $column = esc_sql($column);
+        return $wpdb->get_row($wpdb->prepare("SELECT * FROM $this->table_name WHERE $column = %s LIMIT 1;", $row_id));
     }
 
     /**
@@ -102,10 +85,11 @@ abstract class EsDb {
      * @param $row_id
      * @return  string
      */
-    public function get_column( $column, $row_id ) {
+    public function get_column($column, $row_id)
+    {
         global $wpdb;
-        $column = esc_sql( $column );
-        return $wpdb->get_var( $wpdb->prepare( "SELECT $column FROM $this->table_name WHERE $this->primary_key = %s LIMIT 1;", $row_id ) );
+        $column = esc_sql($column);
+        return $wpdb->get_var($wpdb->prepare("SELECT $column FROM $this->table_name WHERE $this->primary_key = %s LIMIT 1;", $row_id));
     }
 
     /**
@@ -118,11 +102,12 @@ abstract class EsDb {
      * @param $column_value
      * @return  string
      */
-    public function get_column_by( $column, $column_where, $column_value ) {
+    public function get_column_by($column, $column_where, $column_value)
+    {
         global $wpdb;
-        $column_where = esc_sql( $column_where );
-        $column       = esc_sql( $column );
-        return $wpdb->get_var( $wpdb->prepare( "SELECT $column FROM $this->table_name WHERE $column_where = %s LIMIT 1;", $column_value ) );
+        $column_where = esc_sql($column_where);
+        $column = esc_sql($column);
+        return $wpdb->get_var($wpdb->prepare("SELECT $column FROM $this->table_name WHERE $column_where = %s LIMIT 1;", $column_value));
     }
 
     /**
@@ -134,32 +119,57 @@ abstract class EsDb {
      * @param string $type
      * @return  int
      */
-    public function insert( $data, $type = '' ) {
+    public function insert($data, $type = '')
+    {
         global $wpdb;
 
         // Set default values
-        $data = wp_parse_args( $data, $this->get_column_defaults() );
+        $data = wp_parse_args($data, $this->get_column_defaults());
 
-        do_action( 'es_pre_insert_' . $type, $data );
+        do_action('es_pre_insert_' . $type, $data);
 
         // Initialise column format array
         $column_formats = $this->get_columns();
 
         // Force fields to lower case
-        $data = array_change_key_case( $data );
+        $data = array_change_key_case($data);
 
         // White list columns
-        $data = array_intersect_key( $data, $column_formats );
+        $data = array_intersect_key($data, $column_formats);
 
         // Reorder $column_formats to match the order of columns given in $data
-        $data_keys = array_keys( $data );
-        $column_formats = array_merge( array_flip( $data_keys ), $column_formats );
+        $data_keys = array_keys($data);
+        $column_formats = array_merge(array_flip($data_keys), $column_formats);
 
-        $wpdb->insert( $this->table_name, $data, $column_formats );
+        $wpdb->insert($this->table_name, $data, $column_formats);
 
-        do_action( 'es_post_insert_' . $type, $wpdb->insert_id, $data );
+        do_action('es_post_insert_' . $type, $wpdb->insert_id, $data);
 
         return $wpdb->insert_id;
+    }
+
+    /**
+     * Default column values
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  array
+     */
+    public function get_column_defaults()
+    {
+        return array();
+    }
+
+    /**
+     * Whitelist of columns
+     *
+     * @access  public
+     * @since   1.0.0
+     * @return  array
+     */
+    public function get_columns()
+    {
+        return array();
     }
 
     /**
@@ -172,17 +182,18 @@ abstract class EsDb {
      * @param string $where
      * @return  bool
      */
-    public function update( $row_id, $data = array(), $where = '' ) {
+    public function update($row_id, $data = array(), $where = '')
+    {
         global $wpdb;
 
         // Row ID must be positive integer
-        $row_id = absint( $row_id );
+        $row_id = absint($row_id);
 
-        if( empty( $row_id ) ) {
+        if (empty($row_id)) {
             return false;
         }
 
-        if( empty( $where ) ) {
+        if (empty($where)) {
             $where = $this->primary_key;
         }
 
@@ -190,16 +201,16 @@ abstract class EsDb {
         $column_formats = $this->get_columns();
 
         // Force fields to lower case
-        $data = array_change_key_case( $data );
+        $data = array_change_key_case($data);
 
         // White list columns
-        $data = array_intersect_key( $data, $column_formats );
+        $data = array_intersect_key($data, $column_formats);
 
         // Reorder $column_formats to match the order of columns given in $data
-        $data_keys = array_keys( $data );
-        $column_formats = array_merge( array_flip( $data_keys ), $column_formats );
+        $data_keys = array_keys($data);
+        $column_formats = array_merge(array_flip($data_keys), $column_formats);
 
-        if ( false === $wpdb->update( $this->table_name, $data, array( $where => $row_id ), $column_formats ) ) {
+        if (false === $wpdb->update($this->table_name, $data, array($where => $row_id), $column_formats)) {
             return false;
         }
 
@@ -214,18 +225,19 @@ abstract class EsDb {
      * @param int $row_id
      * @return  bool
      */
-    public function delete( $row_id = 0 ) {
+    public function delete($row_id = 0)
+    {
 
         global $wpdb;
 
         // Row ID must be positive integer
-        $row_id = absint( $row_id );
+        $row_id = absint($row_id);
 
-        if( empty( $row_id ) ) {
+        if (empty($row_id)) {
             return false;
         }
 
-        if ( false === $wpdb->query( $wpdb->prepare( "DELETE FROM $this->table_name WHERE $this->primary_key = %d", $row_id ) ) ) {
+        if (false === $wpdb->query($wpdb->prepare("DELETE FROM $this->table_name WHERE $this->primary_key = %d", $row_id))) {
             return false;
         }
 
@@ -239,11 +251,12 @@ abstract class EsDb {
      * @param  string $table The table name
      * @return bool          If the table name exists
      */
-    public function table_exists( $table ) {
+    public function table_exists($table)
+    {
         global $wpdb;
-        $table = sanitize_text_field( $table );
+        $table = sanitize_text_field($table);
 
-        return $wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE '%s'", $table ) ) === $table;
+        return $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE '%s'", $table)) === $table;
     }
 
 }

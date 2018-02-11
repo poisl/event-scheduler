@@ -1,15 +1,14 @@
 <?php if (is_user_logged_in()) : ?>
 
     <?php if ($events[0]->active): ?>
-        <h4 style="color: green"><?php _e('Der Event findet statt,
-            am', 'event_scheduler');?> <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $events[0]->start)->format('d.m.Y H:i'); ?>
+        <h4 style="color: green"><?php _e('Der Event findet statt, am', 'event_scheduler');?>
+            <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $events[0]->start)->format('d.m.Y H:i'); ?>
             <?php _e('im', 'event_scheduler');?> <?php echo $events[0]->location; ?>.</h4>
     <?php endif; ?>
     <?php if (!$events[0]->active): ?>
-        <h4 style="color: red"><?php _e('Der Event
-            am', 'event_scheduler');?> <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $events[0]->start)->format('d.m.Y H:i'); ?> <?php _e('wurde
-            aus
-            folgendem Grund abgesagt:', 'event_scheduler');?> <?php echo $events[0]->inactive_reason; ?></h4>
+        <h4 style="color: red"><?php _e('Der Event am', 'event_scheduler');?>
+            <?php echo DateTime::createFromFormat('Y-m-d H:i:s', $events[0]->start)->format('d.m.Y H:i'); ?>
+            <?php _e('wurde aus folgendem Grund abgesagt', 'event_scheduler');?>: <?php echo $events[0]->inactive_reason; ?></h4>
     <?php endif; ?>
 
     <?php if ($offset >= 0): ?>
@@ -42,7 +41,7 @@
     } ?>
 
     <?php if (count($joiningUsers) > 0): ?>
-        <h4 style="color: green"><?php echo count($joiningUsers); ?> <?php _e('Teilnehmer die zugesagt haben:', 'event_scheduler');?></h4>
+        <h4 style="color: green"><?php echo count($joiningUsers); ?> <?php _e('Teilnehmer die zugesagt haben', 'event_scheduler');?>:</h4>
 
         <table>
             <?php foreach ($joiningUsers as $row) {
@@ -57,7 +56,7 @@
     <?php endif; ?>
 
     <?php if (count($decliningUsers) > 0): ?>
-        <h4 style="color: red"><?php echo count($decliningUsers); ?> <?php _e('Teilnehmer die abgesagt haben:','event_scheduler');?></h4>
+        <h4 style="color: red"><?php echo count($decliningUsers); ?> <?php _e('Teilnehmer die abgesagt haben','event_scheduler');?>:</h4>
 
         <table>
             <?php foreach ($decliningUsers as $row) {
@@ -72,7 +71,7 @@
     <?php endif; ?>
 
     <?php if (count($findUndecidedParticipants) > 0): ?>
-        <h4><?php echo count($findUndecidedParticipants); ?> <?php _e('Teilnahme unklar:','event_scheduler');?></h4>
+        <h4><?php echo count($findUndecidedParticipants); ?> <?php _e('Teilnahme unklar','event_scheduler');?>:</h4>
 
         <table>
             <?php foreach ($findUndecidedParticipants as $row) {

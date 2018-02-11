@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Event Scheduler
  * Plugin URI:        https://github.com/poisl/event_scheduler
- * Description:       Event scheduler can be used for planning of recurring events. Example: If you are in a small sports club, you could plan weekly games. Members will be able to join or cancel, so other members can see who participates in the game. You can plan vacation schedules, where no events will be scheduled. Last but not least you can notify users that have not accepted or canceled the event yet by email.
+ * Description:       Event scheduler kann zur Planung von wiederkehrenden Events genutzt werden.
  * Version:           1.0.0
  * Author:            Thomas Poisl
  * Author URI:        https://profiles.wordpress.org/poisl

@@ -194,23 +194,23 @@ class EsEventDb extends EsDb
 
         //if (false === $results) {
 
-          //  if (true === $count) {
+        //  if (true === $count) {
 
-            //    $results = absint($wpdb->get_var("SELECT COUNT({$this->primary_key}) FROM {$this->table_name} {$where};"));
+        //    $results = absint($wpdb->get_var("SELECT COUNT({$this->primary_key}) FROM {$this->table_name} {$where};"));
 
-           // } else {
+        // } else {
 
-                $results = $wpdb->get_results(
-                    $wpdb->prepare(
-                        "SELECT * FROM {$this->table_name} {$where} ORDER BY {$args['orderby']} {$args['order']} LIMIT %d, %d;",
-                        absint($args['offset']),
-                        absint($args['number'])
-                    )
-                );
+        $results = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT * FROM {$this->table_name} {$where} ORDER BY {$args['orderby']} {$args['order']} LIMIT %d, %d;",
+                absint($args['offset']),
+                absint($args['number'])
+            )
+        );
 
-            //}
+        //}
 
-            //wp_cache_set($cache_key, $results, 'events', 3600);
+        //wp_cache_set($cache_key, $results, 'events', 3600);
 
         //}
         return $results;
