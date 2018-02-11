@@ -1,3 +1,18 @@
+<?php
+
+/**
+ * Provide a public-facing view for the plugin
+ *
+ * This file is used to markup the public-facing aspects of the plugin.
+ *
+ * @link       https://profiles.wordpress.org/poisl
+ * @since      1.0.0
+ *
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/public/partials
+ */
+?>
+
 <?php if (is_user_logged_in()) : ?>
 
     <?php if ($statistics): ?>

@@ -9,8 +9,8 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  * @author     Thomas Poisl <thomas@poisl.org>
  */
-class Event_scheduler_i18n {
+class Event_Scheduler_i18n {
 
 
 	/**
@@ -32,16 +32,16 @@ class Event_scheduler_i18n {
 	 *
 	 * @since    1.0.0
 	 */
-	public function load_plugin_textdomain() {
+	public function event_scheduler_load_plugin_textdomain() {
 
-		load_plugin_textdomain(
-			'event-scheduler',
-			false,
-            basename( dirname( __FILE__ ) ) . '/languages'
-		);
+        $domain = 'event-scheduler';
+        $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+        if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
+            return $loaded;
+        } else {
+            load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+        }
 
 	}
-
-
 
 }

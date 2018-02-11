@@ -6,8 +6,8 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  * @author     Thomas Poisl <thomas@poisl.org>
  */
-class Event_scheduler_Loader {
+class Event_Scheduler_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

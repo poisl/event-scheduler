@@ -10,7 +10,7 @@
  *
  * @link              https://profiles.wordpress.org/poisl
  * @since             1.0.0
- * @package           Event_scheduler
+ * @package           Event_Scheduler
  *
  * @wordpress-plugin
  * Plugin Name:       Event Scheduler
@@ -43,7 +43,7 @@ define( 'EVENT_SCHEDULER_VERSION', '1.0.0' );
  */
 function activate_event_scheduler() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-event-scheduler-activator.php';
-	Event_scheduler_Activator::activate();
+	Event_Scheduler_Activator::activate();
 }
 
 /**
@@ -52,7 +52,7 @@ function activate_event_scheduler() {
  */
 function deactivate_event_scheduler() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-event-scheduler-deactivator.php';
-	Event_scheduler_Deactivator::deactivate();
+	Event_Scheduler_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_event_scheduler' );
@@ -75,7 +75,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-event-scheduler.php';
  */
 function run_event_scheduler() {
 
-	$plugin = new Event_scheduler();
+	$plugin = new Event_Scheduler();
 	$plugin->run();
 
 }

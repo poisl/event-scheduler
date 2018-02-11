@@ -6,8 +6,8 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  * @author     Thomas Poisl <thomas@poisl.org>
  */
-class Event_scheduler_Activator
+class Event_Scheduler_Activator
 {
 
     /**

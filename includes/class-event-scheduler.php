@@ -9,8 +9,8 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Event_scheduler
- * @subpackage Event_scheduler/includes
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/includes
  * @author     Thomas Poisl <thomas@poisl.org>
  */
-class Event_scheduler {
+class Event_Scheduler {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Event_scheduler {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Event_scheduler_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Event_Scheduler_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -86,10 +86,10 @@ class Event_scheduler {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Event_scheduler_Loader. Orchestrates the hooks of the plugin.
-	 * - Event_scheduler_i18n. Defines internationalization functionality.
-	 * - Event_scheduler_Admin. Defines all hooks for the admin area.
-	 * - Event_scheduler_Public. Defines all hooks for the public side of the site.
+	 * - Event_Scheduler_Loader. Orchestrates the hooks of the plugin.
+	 * - Event_Scheduler_i18n. Defines internationalization functionality.
+	 * - Event_Scheduler_Admin. Defines all hooks for the admin area.
+	 * - Event_Scheduler_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -122,14 +122,14 @@ class Event_scheduler {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-event-scheduler-public.php';
 
-        $this->loader = new Event_scheduler_Loader();
+        $this->loader = new Event_Scheduler_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Event_scheduler_i18n class in order to set the domain and to register the hook
+	 * Uses the Event_Scheduler_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,9 +137,9 @@ class Event_scheduler {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Event_scheduler_i18n();
+		$plugin_i18n = new Event_Scheduler_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'event_scheduler_load_plugin_textdomain' );
 
 	}
 
@@ -152,7 +152,7 @@ class Event_scheduler {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Event_scheduler_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Event_Scheduler_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -178,7 +178,7 @@ class Event_scheduler {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Event_scheduler_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Event_Scheduler_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -209,7 +209,7 @@ class Event_scheduler {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Event_scheduler_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Event_Scheduler_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

@@ -6,8 +6,8 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/admin
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/admin
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/admin
  * @author     Thomas Poisl <thomas@poisl.org>
  */
-class Event_scheduler_Admin
+class Event_Scheduler_Admin
 {
 
     /**
@@ -68,10 +68,10 @@ class Event_scheduler_Admin
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Event_scheduler_Loader as all of the hooks are defined
+         * defined in Event_Scheduler_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Event_scheduler_Loader will then create the relationship
+         * The Event_Scheduler_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
@@ -92,10 +92,10 @@ class Event_scheduler_Admin
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Event_scheduler_Loader as all of the hooks are defined
+         * defined in Event_Scheduler_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Event_scheduler_Loader will then create the relationship
+         * The Event_Scheduler_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
@@ -121,7 +121,7 @@ class Event_scheduler_Admin
          *        Administration Menus: http://codex.wordpress.org/Administration_Menus
          *
          */
-        add_options_page(__('Event Scheduler - Configuration','event-scheduler'), 'Event Scheduler', 'manage_options', $this->plugin_name, array($this, 'event_scheduler_setup_page')
+        add_options_page(__('Event Scheduler - Configuration', 'event-scheduler'), 'Event Scheduler', 'manage_options', $this->plugin_name, array($this, 'event_scheduler_setup_page')
         );
     }
 
@@ -139,7 +139,7 @@ class Event_scheduler_Admin
         *  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
         */
         $settings_link = array(
-            '<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __(__('Settings','event-scheduler'), $this->plugin_name) . '</a>',
+            '<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __(__('Settings', 'event-scheduler'), $this->plugin_name) . '</a>',
         );
         return array_merge($settings_link, $links);
 

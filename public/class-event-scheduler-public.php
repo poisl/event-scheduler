@@ -6,8 +6,8 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/public
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Event_scheduler
- * @subpackage Event_scheduler/public
+ * @package    Event_Scheduler
+ * @subpackage Event_Scheduler/public
  * @author     Thomas Poisl <thomas@poisl.org>
  */
-class Event_scheduler_Public
+class Event_Scheduler_Public
 {
 
     /**
@@ -53,6 +53,8 @@ class Event_scheduler_Public
 
         $this->plugin_name = $plugin_name;
         $this->version = $version;
+
+        add_action('init', 'event_scheduler_load_plugin_textdomain');
 
         /**
          * The class responsible for different helping operations
@@ -95,10 +97,10 @@ class Event_scheduler_Public
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Event_scheduler_Loader as all of the hooks are defined
+         * defined in Event_Scheduler_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Event_scheduler_Loader will then create the relationship
+         * The Event_Scheduler_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */
@@ -119,10 +121,10 @@ class Event_scheduler_Public
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
-         * defined in Event_scheduler_Loader as all of the hooks are defined
+         * defined in Event_Scheduler_Loader as all of the hooks are defined
          * in that particular class.
          *
-         * The Event_scheduler_Loader will then create the relationship
+         * The Event_Scheduler_Loader will then create the relationship
          * between the defined hooks and the functions defined in this
          * class.
          */

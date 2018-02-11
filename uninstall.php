@@ -22,7 +22,7 @@
  * @link       https://profiles.wordpress.org/poisl
  * @since      1.0.0
  *
- * @package    Event_scheduler
+ * @package    Event_Scheduler
  */
 
 // If uninstall not called from WordPress, then exit.
