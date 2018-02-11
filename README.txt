@@ -26,7 +26,7 @@ declined the event by email.
 
 1. Download and activate the "Event Scheduler" plugin.
 2. Insert shortcode "event_scheduler_event_list" on a page.
-3. Configure the plugins thorugh the settings page and fill all required fields.
+3. Configure the plugins through the settings page and fill all required fields.
 4. Optionally you can use the "WP-Members" plugin, so Event Scheduler will only work with active users.
 5. Mail notifications can easily be triggered with the "WP Crontrol" plugin. Therefore please use the hook "event_scheduler_mail_notification".
 
