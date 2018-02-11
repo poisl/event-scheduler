@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Event Scheduler 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/event_scheduler\n"
-"POT-Creation-Date: 2018-02-11 13:18:52+00:00\n"
+"POT-Creation-Date: 2018-02-11 14:42:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-11 14:25+0100\n"
+"PO-Revision-Date: 2018-02-11 15:45+0100\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.6\n"
 "Last-Translator: Thomas Poisl <thomas@poisl.org>\n"
@@ -99,6 +99,10 @@ msgstr "Ferienverwaltung, zu dieser Zeit finden keine Events statt"
 msgid "List all active members"
 msgstr "Liste mit allen aktiven Mitgliedern"
 
+#: public/class-event_scheduler-public.php:170
+msgid "Please configure the plugin settings first."
+msgstr "Bitte zuerst die Einstellungen des Plugins konfigurieren."
+
 #: public/partials/event_scheduler-public-event-list-admin-display.php:3
 msgid "Activate event"
 msgstr "Event aktivieren"
@@ -117,7 +121,7 @@ msgstr "Der Event findet statt, am"
 
 #: public/partials/event_scheduler-public-event-list-display.php:6
 msgid "at"
-msgstr ""
+msgstr "im"
 
 #: public/partials/event_scheduler-public-event-list-display.php:9
 msgid "Event on"
