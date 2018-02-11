@@ -43,9 +43,11 @@
                     echo "<td style='color:red'>" . $row['minimumCancels'] . "</td>";
                     echo "<td style='color:red'>" . $row['maximumCancels'] . "</td>";
                     echo "<td style='font-size:8px'>";
-                    foreach ($row['tops'] as $top) {
-                        $user_info = get_userdata($top['participantId']);
-                        echo $user_info->first_name . " " . $user_info->last_name . " (" . $top['eventsAccepted'] . ") <br>";
+                    if ($row['tops']) {
+                        foreach ($row['tops'] as $top) {
+                            $user_info = get_userdata($top['participantId']);
+                            echo $user_info->first_name . " " . $user_info->last_name . " (" . $top['eventsAccepted'] . ") <br>";
+                        }
                     }
                     echo "</td>";
                     echo "</tr>";
@@ -55,7 +57,7 @@
         </table>
 
     <?php elseif (!$statistics) : ?>
-        <?php _e('No events existing.', $this->plugin_name); ?></div>
+        <?php _e('No events existing.', $this->plugin_name); ?>
     <?php endif; ?>
 
 <?php else : ?>
