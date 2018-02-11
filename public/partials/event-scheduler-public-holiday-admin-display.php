@@ -15,20 +15,20 @@
 
 <?php if (is_user_logged_in()) : ?>
 
-    <h4><?php _e('Create new holiday', 'event-scheduler');?></h4>
+    <h4><?php _e('Create new holiday', $this->plugin_name); ?></h4>
     <form method="get">
-        <?php _e('Description', 'event-scheduler');?>: <input type="text" name="description" required autofocus>
-        <?php _e('Begin', 'event-scheduler');?>: <input type="date" name="start" required>
-        <?php _e('End','event-scheduler');?>: <input type="date" name="end" required><br>
-        <button type="submit" name="action" value="create"><?php _e('Create', 'event-scheduler');?></button>
+        <?php _e('Description', $this->plugin_name); ?>: <input type="text" name="description" required autofocus>
+        <?php _e('Begin', $this->plugin_name); ?>: <input type="date" name="start" required>
+        <?php _e('End', $this->plugin_name); ?>: <input type="date" name="end" required><br>
+        <button type="submit" name="action" value="create"><?php _e('Create', $this->plugin_name); ?></button>
     </form>
 
     <?php if (count($holidays) > 0): ?>
         <table>
             <tr>
-                <th><?php _e('Description', 'event-scheduler');?></th>
-                <th><?php _e('Begin', 'event-scheduler');?></th>
-                <th><?php _e('End','event-scheduler');?></th>
+                <th><?php _e('Description', $this->plugin_name); ?></th>
+                <th><?php _e('Begin', $this->plugin_name); ?></th>
+                <th><?php _e('End', $this->plugin_name); ?></th>
                 <th></th>
                 <th></th>
             </tr>
@@ -53,9 +53,9 @@
         </table>
     <?php endif; ?>
     <?php if (count($holidays) == 0): ?>
-        <h4><?php _e('No upcoming holidays exist.','event-scheduler');?></h4>
+        <h4><?php _e('No upcoming holidays exist.', $this->plugin_name); ?></h4>
     <?php endif; ?>
 
 <?php else : ?>
-    <div class="attention"><?php _e('Event Scheduler can only be used by active members.','event-scheduler');?></div>
+    <div class="attention"><?php _e('Event Scheduler can only be used by active members.', $this->plugin_name); ?></div>
 <?php endif; ?>

@@ -32,16 +32,14 @@ class Event_Scheduler_i18n {
 	 *
 	 * @since    1.0.0
 	 */
-	public function event_scheduler_load_plugin_textdomain() {
+    public function load_plugin_textdomain() {
 
-        $domain = 'event-scheduler';
-        $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-        if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
-            return $loaded;
-        } else {
-            load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
-        }
+        load_plugin_textdomain(
+            'event-scheduler',
+            false,
+            dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+        );
 
-	}
+    }
 
 }

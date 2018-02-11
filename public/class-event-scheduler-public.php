@@ -54,8 +54,6 @@ class Event_Scheduler_Public
         $this->plugin_name = $plugin_name;
         $this->version = $version;
 
-        add_action('init', 'event_scheduler_load_plugin_textdomain');
-
         /**
          * The class responsible for different helping operations
          */
@@ -169,7 +167,7 @@ class Event_Scheduler_Public
 
         // Check if plugin settings are configured
         if (!$eventLocation) {
-            die(__('Please configure the plugin settings first.'));
+            die(__('Please configure the plugin settings first.', $this->plugin_name));
         }
 
         // Get next event date

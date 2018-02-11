@@ -18,9 +18,9 @@
     <?php if (count($holidays) > 0): ?>
         <table class="table1">
             <tr>
-                <th><?php _e('Description', 'event-scheduler');?></th>
-                <th><?php _e('Begin','event-scheduler');?></th>
-                <th><?php _e('End','event-scheduler');?></th>
+                <th><?php _e('Description', $this->plugin_name);?></th>
+                <th><?php _e('Begin',$this->plugin_name);?></th>
+                <th><?php _e('End',$this->plugin_name);?></th>
                 <th></th>
                 <th></th>
             </tr>
@@ -36,9 +36,9 @@
         </table>
     <?php endif; ?>
     <?php if (count($holidays) == 0): ?>
-        <h4><?php _e('No upcoming holidays exist.','event-scheduler');?></h4>
+        <h4><?php _e('No upcoming holidays exist.',$this->plugin_name);?></h4>
     <?php endif; ?>
 
 <?php else : ?>
-    <div class="attention"><?php _e('Event Scheduler can only be used by active members.','event-scheduler');?></div>
+    <div class="attention"><?php _e('Event Scheduler can only be used by active members.',$this->plugin_name);?></div>
 <?php endif; ?>
