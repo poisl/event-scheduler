@@ -2,16 +2,16 @@
 
     <table>
         <tr>
-            <td><?php _e('Jahr','event_scheduler');?></td>
-            <td><?php _e('Spieltage','event_scheduler');?></td>
-            <td><?php _e('Abgesagte Spieltermine','event_scheduler');?></td>
-            <td><?php _e('Zusagen durchschnittlich','event_scheduler');?></td>
-            <td><?php _e('Zusagen minimal','event_scheduler');?></td>
-            <td><?php _e('Zusagen maximal','event_scheduler');?></td>
-            <td><?php _e('Absagen durchschnittlich','event_scheduler');?></td>
-            <td><?php _e('Absagen minimal','event_scheduler');?></td>
-            <td><?php _e('Absagen maximal','event_scheduler');?></td>
-            <td><?php _e('Meiste Zusagen','event_scheduler');?></td>
+            <td><?php _e('Year','event_scheduler');?></td>
+            <td><?php _e('Events','event_scheduler');?></td>
+            <td><?php _e('Canceled events','event_scheduler');?></td>
+            <td><?php _e('Average accepts','event_scheduler');?></td>
+            <td><?php _e('Minimal accepts','event_scheduler');?></td>
+            <td><?php _e('Maximal accepts','event_scheduler');?></td>
+            <td><?php _e('Average declines','event_scheduler');?></td>
+            <td><?php _e('Minimal declines','event_scheduler');?></td>
+            <td><?php _e('Maximal declines','event_scheduler');?></td>
+            <td><?php _e('Top participants','event_scheduler');?></td>
         </tr>
 
         <?php if (count($statistics) > 0): ?>
@@ -39,6 +39,6 @@
     </table>
 
 <?php else : ?>
-    <div class="attention"><?php _e('Der Planer kann nur von angemeldeten Vereinsmitgliedern genutzt werden.', 'event_scheduler');?></div>
+    <div class="attention"><?php _e('Event Scheduler can only be used by active members.', 'event_scheduler');?></div>
 <?php endif; ?>
 

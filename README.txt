@@ -11,32 +11,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Event Scheduler kann zur Planung von wiederkehrenden Events genutzt werden.
+Event scheduler can be used for planning of recurring events.
 
-Beispiel: In einem kleinen Sportverein, können wöchentliche Spiele geplant werden. Mitglieder können
-zu einem Event zusagen oder absagen,damit deren Mitspieler sehen, wer am Spiel teilnehmen wird.
+Example: If you are in a small sports club, you could plan weekly games. Members will be able
+to join or cancel, so other members can see who participates in the game.
 
-Ferien können eingegeben werden, zu denen keine Events stattfinden.
+You can plan vacationschedules, where no events will be scheduled.
 
-Mitspieler, die weder zu- noch abgesagt haben, können per Mail benachrichtigt werden.
+Last but not least you can notify users that have not accepted or canceled the event yet by email.
 
 == Installation ==
 
-1. Das Plugin "Event Scheduler" herunterladen und aktivieren.
-2. Eine Seite mit dem Shortcode "event_scheduler_event_list" versehen.
-3. Plugin über die Einstellungen konfigurieren und alle Pflichtfelder ausfüllen.
-4. Optional kann zusätzlich das "WP-Members" Plugin verwendet werden, damit Event Scheduler nur aktiven User verwendet.
-5. Optional kann die Mailbenachrichtigung mit dem "WP Crontrol" Plugin konfiguriert werden Dazu wird der Hook "event_scheduler_mail_notification" verwendet.
+1. Download and activate the "Event Scheduler" plugin.
+2. Insert shortcode "event_scheduler_event_list" on a page.
+3. Configure the plugins thorugh the settings page and fill all required fields.
+4. Optionally you can use the "WP-Members" plugin, so Event Scheduler will only work with active users.
+5. Mail notifications can easily be triggered with the "WP Crontrol" plugin. Therefore please use the hook "event_scheduler_mail_notification".
 
-Die folgenden Shortcodes können auf den Seiten verwendet werden:
-"event_scheduler_event_list" - Zeigt den aktuellen Event und ermöglicht es Webseitenbenutzern zu- oder abzusagen
-"event_scheduler_event_statistics" - Statistiken für die vergangenen Events
-"event_scheduler_holiday" - Ferienverwaltung, zu dieser Zeit finden keine Events statt
-"event_scheduler_member_list" - Liste mit allen aktiven Mitgliedern
+You can use the following shortcodes on pages:
+"event_scheduler_event_list" - Lists the current event, so website members can join or decline it
+"event_scheduler_event_statistics" - Statistics for past events
+"event_scheduler_holiday" - Manage upcoming holiday, when no events will take place
+"event_scheduler_member_list" - List all active members
 
-Event Scheduler ist in Deutsch und Englisch verfügbar und kann mittels POT-Datei leicht in weitere Sprachen übersetzt werden.
+Event Scheduler is available in english and german language. It can easily be translated in other languages using the POT files.
 
 == Changelog ==
 
 = 1.0 =
-* Initiale Version
+* Initial version

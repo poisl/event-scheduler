@@ -3,9 +3,9 @@
     <?php if (count($holidays) > 0): ?>
         <table class="table1">
             <tr>
-                <th><?php _e('Beschreibung', 'event_scheduler');?></th>
-                <th><?php _e('Anfang','event_scheduler');?></th>
-                <th><?php _e('Ende','event_scheduler');?></th>
+                <th><?php _e('Description', 'event_scheduler');?></th>
+                <th><?php _e('Begin','event_scheduler');?></th>
+                <th><?php _e('End','event_scheduler');?></th>
                 <th></th>
                 <th></th>
             </tr>
@@ -21,9 +21,9 @@
         </table>
     <?php endif; ?>
     <?php if (count($holidays) == 0): ?>
-        <h4><?php _e('Keine künftigen Ferien eingetragen.','event_scheduler');?></h4>
+        <h4><?php _e('No upcoming holidays exist.','event_scheduler');?></h4>
     <?php endif; ?>
 
 <?php else : ?>
-    <div class="attention"><?php _e('Der Planer kann nur von angemeldeten Vereinsmitgliedern genutzt werden.','event_scheduler');?></div>
+    <div class="attention"><?php _e('Event Scheduler can only be used by active members.','event_scheduler');?></div>
 <?php endif; ?>

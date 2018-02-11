@@ -28,7 +28,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_start_date">
-                        <?php _e('Event Startdatum (Y-m-d), z. B. 2016-01-15', 'event_scheduler'); ?></label>
+                        <?php _e('Event start date (Y-m-d), e.g. 2016-01-15', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>event_start_date"
@@ -41,7 +41,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_start_time">
-                        <?php _e('Event Startzeit (H:M), z. B. 20:00', 'event_scheduler'); ?></label>
+                        <?php _e('Event start time (H:M), e.g. 20:00', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>event_start_time"
@@ -54,7 +54,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_end_time">
-                        <?php _e('Event Endzeit (H:M), z. B. 22:00', 'event_scheduler'); ?></label>
+                        <?php _e('Event end time (H:M), e.g. 22:00', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>event_end_time"
@@ -67,7 +67,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_repeat_interval">
-                        <?php _e('Der Event wird in der hier angegebenen Zeit in Wochen wiederholt, z. B. 1', 'event_scheduler'); ?></label>
+                        <?php _e('Event is repeated after amount of weeks specified here, e.g. 1', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text"
@@ -82,7 +82,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_default_location">
-                        <?php _e('Event Standort, z. B. Turnhalle', 'event_scheduler'); ?></label>
+                        <?php _e('Event location, e.g. gym', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text"
@@ -97,7 +97,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_alternate_location">
-                        <?php _e('(Optional) Alternativer Event Standort, z. B. Sportplatz', 'event_scheduler'); ?></label>
+                        <?php _e('Optional alternative event location, e.g. sports ground', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text"
@@ -109,7 +109,7 @@
         </table>
 
         <p>
-            <?php _e('Alle Einstellungen ab hier werden für die Mailbenachrichtigung benötigt. Mit dem Cron Hook "event_scheduler_mail_notification" kann der Mailversand automatisiert werden.', 'event_scheduler'); ?>
+            <?php _e('The settings from here are all used for email notifications. You can setup a cron schedule with the hook "event_scheduler_mail_notification" to automate the notification process.', 'event_scheduler'); ?>
         </p>
 
         <table class="form-table">
@@ -117,7 +117,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_notification_url">
-                        <?php _e('URL zur Seite mit dem Eventplaner mit Slash am Ende', 'event_scheduler'); ?></label>
+                        <?php _e('Full URL with trailing slash to the page where you have included your event list', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text"
@@ -132,7 +132,7 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_notification_subject">
-                        <?php _e('Betreff für die Mailbenachrichtigung, z. B. Event Benachrichtigung', 'event_scheduler'); ?></label>
+                        <?php _e('Email subject for the email notification, e.g. Event notification', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <input type="text" class="regular-text"
@@ -147,13 +147,13 @@
             <tr>
                 <th scope="row"><label
                             for="<?php echo $this->plugin_name; ?>event_notification_subject">
-                        <?php _e('Text für die Mailbenachrichtigung', 'event_scheduler'); ?></label>
+                        <?php _e('Email body for the email notification', 'event_scheduler'); ?></label>
                 </th>
                 <td>
                     <textarea class="large-text code" id="<?php echo $this->plugin_name; ?>event_notification_body"
                               name="<?php echo $this->plugin_name; ?>[event_notification_body]" rows="6" cols="20"
                               required><?php if (!empty($event_notification_body)) echo $event_notification_body; ?></textarea>
-                    <p class="description"><?php _e('HTML-Tags und die folgenden dynamischen Variablen können verwendet werden:', 'event_scheduler'); ?>
+                    <p class="description"><?php _e('HTML-Tags and the following dynamic variables can be used:', 'event_scheduler'); ?>
                         ###name###, ###eventdate###, ###eventtime###, ###eventlocation###, ###acceptlink###,
                         ###cancellink###
                     </p>
@@ -161,22 +161,22 @@
             </tr>
         </table>
 
-        <?php submit_button(__('Änderungen übernehmen', 'event_scheduler'), 'primary', 'submit', TRUE); ?>
+        <?php submit_button(__('Save all changes', 'event_scheduler'), 'primary', 'submit', TRUE); ?>
 
         <!-- Plugin shortcodes -->
         <p>
-            <?php _e('Die folgenden Shortcodes können auf den Seiten verwendet werden:', 'event_scheduler'); ?>
+            <?php _e('You can use the following shortcodes on pages', 'event_scheduler'); ?>:
             <br>
             <small><strong>[event_scheduler_event_list]
-                    - <?php _e('Zeigt den aktuellen Event und ermöglicht es Webseitenbenutzern zu- oder abzusagen', 'event_scheduler'); ?>
+                    - <?php _e('Lists the current event, so website members can join or decline it', 'event_scheduler'); ?>
                     <br>
                     [event_scheduler_event_statistics]
-                    - <?php _e('Statistiken für die vergangenen Events', 'event_scheduler'); ?><br>
+                    - <?php _e('Statistics for past events', 'event_scheduler'); ?><br>
                     [event_scheduler_holiday]
-                    - <?php _e('Ferienverwaltung, zu dieser Zeit finden keine Events statt', 'event_scheduler'); ?>
+                    - <?php _e('Manage upcoming holiday, when no events will take place', 'event_scheduler'); ?>
                     <br>
                     [event_scheduler_member_list]
-                    - <?php _e('Liste mit allen aktiven Mitgliedern', 'event_scheduler'); ?></strong>
+                    - <?php _e('List all active members', 'event_scheduler'); ?></strong>
             </small>
         </p>
     </form>

@@ -121,7 +121,7 @@ class Event_scheduler_Admin
          *        Administration Menus: http://codex.wordpress.org/Administration_Menus
          *
          */
-        add_options_page(__('Event Scheduler - Konfiguration','event_scheduler'), 'Event Scheduler', 'manage_options', $this->plugin_name, array($this, 'event_scheduler_setup_page')
+        add_options_page(__('Event Scheduler - Configuration','event_scheduler'), 'Event Scheduler', 'manage_options', $this->plugin_name, array($this, 'event_scheduler_setup_page')
         );
     }
 
@@ -139,7 +139,7 @@ class Event_scheduler_Admin
         *  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
         */
         $settings_link = array(
-            '<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __(__('Einstellungen','event_scheduler'), $this->plugin_name) . '</a>',
+            '<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __(__('Settings','event_scheduler'), $this->plugin_name) . '</a>',
         );
         return array_merge($settings_link, $links);
 
