@@ -32,7 +32,7 @@
                 </th>
                 <td>
                     <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>event_start_date"
-                           name="<?php echo $this->plugin_name; ?>event_start_date"
+                           name="<?php echo $this->plugin_name; ?>[event_start_date]"
                            value="<?php if (!empty($event_start_date)) echo $event_start_date; ?>" required/>
                 </td>
             </tr>
@@ -45,7 +45,7 @@
                 </th>
                 <td>
                     <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>event_start_time"
-                           name="<?php echo $this->plugin_name; ?>event_start_time"
+                           name="<?php echo $this->plugin_name; ?>[event_start_time]"
                            value="<?php if (!empty($event_start_time)) echo $event_start_time; ?>" required/>
                 </td>
             </tr>
@@ -58,7 +58,7 @@
                 </th>
                 <td>
                     <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>event_end_time"
-                           name="<?php echo $this->plugin_name; ?>event_end_time"
+                           name="<?php echo $this->plugin_name; ?>[event_end_time]"
                            value="<?php if (!empty($event_end_time)) echo $event_end_time; ?>" required/>
                 </td>
             </tr>
@@ -72,7 +72,7 @@
                 <td>
                     <input type="text" class="regular-text"
                            id="<?php echo $this->plugin_name; ?>event_repeat_interval"
-                           name="<?php echo $this->plugin_name; ?>event_repeat_interval"
+                           name="<?php echo $this->plugin_name; ?>[event_repeat_interval]"
                            value="<?php if (!empty($event_repeat_interval)) echo $event_repeat_interval; ?>"
                            required/>
                 </td>
@@ -87,7 +87,7 @@
                 <td>
                     <input type="text" class="regular-text"
                            id="<?php echo $this->plugin_name; ?>event_default_location"
-                           name="<?php echo $this->plugin_name; ?>event_default_location"
+                           name="<?php echo $this->plugin_name; ?>[event_default_location]"
                            value="<?php if (!empty($event_default_location)) echo $event_default_location; ?>"
                            required/>
                 </td>
@@ -102,7 +102,7 @@
                 <td>
                     <input type="text" class="regular-text"
                            id="<?php echo $this->plugin_name; ?>event_alternate_location"
-                           name="<?php echo $this->plugin_name; ?>event_alternate_location"
+                           name="<?php echo $this->plugin_name; ?>[event_alternate_location]"
                            value="<?php if (!empty($event_alternate_location)) echo $event_alternate_location; ?>"/>
                 </td>
             </tr>
@@ -122,7 +122,7 @@
                 <td>
                     <input type="text" class="regular-text"
                            id="<?php echo $this->plugin_name; ?>event_notification_url"
-                           name="<?php echo $this->plugin_name; ?>event_notification_url"
+                           name="<?php echo $this->plugin_name; ?>[event_notification_url]"
                            value="<?php if (!empty($event_notification_url)) echo $event_notification_url; ?>"
                            required/>
                 </td>
@@ -137,7 +137,7 @@
                 <td>
                     <input type="text" class="regular-text"
                            id="<?php echo $this->plugin_name; ?>event_notification_subject"
-                           name="<?php echo $this->plugin_name; ?>event_notification_subject"
+                           name="<?php echo $this->plugin_name; ?>[event_notification_subject]"
                            value="<?php if (!empty($event_notification_subject)) echo $event_notification_subject; ?>"
                            required/>
                 </td>
