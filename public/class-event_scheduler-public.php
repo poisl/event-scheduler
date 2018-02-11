@@ -160,13 +160,18 @@ class Event_scheduler_Public
         // Get request action
         $action = $div->get_request_parameter('action');
 
-        // Get next event date
-        $nextEventDate = $div->nextEventDate($offset);
-
         // Initialize required plugin otions
         $options = get_option($this->plugin_name);
         $eventLocation = $options['event_default_location'];
         $alternateLocation = $options['event_alternate_location'];
+
+        // Check if plugin settings are configured
+        if (!$eventLocation) {
+            die(__('Please configure the plugin settings first.'));
+        }
+
+        // Get next event date
+        $nextEventDate = $div->nextEventDate($offset);
 
         // Check if event exists and create it if necessary
         $events_db = new EsEventDb;
