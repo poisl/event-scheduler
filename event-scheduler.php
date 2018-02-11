@@ -14,14 +14,14 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Event Scheduler
- * Plugin URI:        https://github.com/poisl/event_scheduler
+ * Plugin URI:        https://github.com/poisl/event-scheduler
  * Description:       Event scheduler can be used for planning of recurring events.
  * Version:           1.0.0
  * Author:            Thomas Poisl
  * Author URI:        https://profiles.wordpress.org/poisl
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       event_scheduler
+ * Text Domain:       event-scheduler
  * Domain Path:       /languages
  */
 
@@ -39,19 +39,19 @@ define( 'EVENT_SCHEDULER_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-event_scheduler-activator.php
+ * This action is documented in includes/class-event-scheduler-activator.php
  */
 function activate_event_scheduler() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-event_scheduler-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-event-scheduler-activator.php';
 	Event_scheduler_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-event_scheduler-deactivator.php
+ * This action is documented in includes/class-event-scheduler-deactivator.php
  */
 function deactivate_event_scheduler() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-event_scheduler-deactivator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-event-scheduler-deactivator.php';
 	Event_scheduler_Deactivator::deactivate();
 }
 
@@ -62,7 +62,7 @@ register_deactivation_hook( __FILE__, 'deactivate_event_scheduler' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-event_scheduler.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-event-scheduler.php';
 
 /**
  * Begins execution of the plugin.

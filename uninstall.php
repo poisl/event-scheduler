@@ -42,7 +42,7 @@ $wpdb->query("DROP TABLE IF EXISTS $participant_table");
 $wpdb->query("DROP TABLE IF EXISTS $holiday_table");
 
 /*Remove any other options your plug-in installed and clear any plug-in cron jobs */
-$options = delete_option($this->plugin_name);
+$options = delete_option('event-scheduler');
 
 if (wp_next_scheduled('event_scheduler_mail_notification')) {
     $timestamp = wp_next_scheduled('event_scheduler_mail_notification');

@@ -103,7 +103,7 @@ class Event_scheduler_Public
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/event_scheduler-public.css', array(), $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/event-scheduler-public.css', array(), $this->version, 'all');
 
     }
 
@@ -127,7 +127,7 @@ class Event_scheduler_Public
          * class.
          */
 
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/event_scheduler-public.js', array('jquery'), $this->version, false);
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/event-scheduler-public.js', array('jquery'), $this->version, false);
 
     }
 
@@ -215,7 +215,7 @@ class Event_scheduler_Public
         $decliningUsers = $div->findDecliningParticipants($events[0]->uid);
         $findUndecidedParticipants = $div->findUndecidedParticipants($events[0]->uid);
 
-        include_once('partials/event_scheduler-public-event-list-display.php');
+        include_once('partials/event-scheduler-public-event-list-display.php');
 
         $output = ob_get_contents();
         ob_end_clean();
@@ -258,10 +258,10 @@ class Event_scheduler_Public
 
         // Admins can manage holidays
         if (current_user_can('manage_options')) {
-            include_once('partials/event_scheduler-public-holiday-admin-display.php');
+            include_once('partials/event-scheduler-public-holiday-admin-display.php');
         } // Normal users will only see the list of upcoming holidays
         else {
-            include_once('partials/event_scheduler-public-holiday-display.php');
+            include_once('partials/event-scheduler-public-holiday-display.php');
         }
 
         $output = ob_get_contents();
@@ -284,7 +284,7 @@ class Event_scheduler_Public
         // Get active wordpress users ids
         $members = $div->getWordpressUsers();
 
-        include_once('partials/event_scheduler-public-member-list-display.php');
+        include_once('partials/event-scheduler-public-member-list-display.php');
 
         $output = ob_get_contents();
         ob_end_clean();
@@ -339,7 +339,7 @@ class Event_scheduler_Public
             }
         }
 
-        include_once('partials/event_scheduler-public-event-statistics-display.php');
+        include_once('partials/event-scheduler-public-event-statistics-display.php');
 
         $output = ob_get_contents();
         ob_end_clean();

@@ -35,9 +35,9 @@ class Event_scheduler_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'event_scheduler',
+			'event-scheduler',
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+            basename( dirname( __FILE__ ) ) . '/languages'
 		);
 
 	}

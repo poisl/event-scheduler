@@ -72,7 +72,7 @@ class Event_scheduler {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'event_scheduler';
+		$this->plugin_name = 'event-scheduler';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -103,24 +103,24 @@ class Event_scheduler {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-event_scheduler-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-event-scheduler-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-event_scheduler-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-event-scheduler-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-event_scheduler-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-event-scheduler-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-event_scheduler-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-event-scheduler-public.php';
 
         $this->loader = new Event_scheduler_Loader();
 
