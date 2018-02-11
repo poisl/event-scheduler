@@ -13,12 +13,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Event scheduler can be used for planning of recurring events.
 
-Example: If you are in a small sports club, you could plan weekly games. Members will be able
-to join or cancel, so other members can see who participates in the game.
+Example: If you are in a small sports club, you could plan weekly games.
+Members will be able to join or cancel, so other members can see who
+participates in the game.
 
-You can plan vacationschedules, where no events will be scheduled.
+You can plan vacation schedules, where no events will be scheduled.
 
-Last but not least you can notify users that have not accepted or canceled the event yet by email.
+Last but not least you can notify users that have not yet accepted or
+declined the event by email.
 
 == Installation ==
 
@@ -34,7 +36,7 @@ You can use the following shortcodes on pages:
 "event_scheduler_holiday" - Manage upcoming holiday, when no events will take place
 "event_scheduler_member_list" - List all active members
 
-Event Scheduler is available in english and german language. It can easily be translated in other languages using the POT files.
+Event Scheduler is available in english and german language. It can easily be translated in other languages using the provided POT file.
 
 == Changelog ==
 
