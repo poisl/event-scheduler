@@ -16,7 +16,7 @@
  * Plugin Name:       Event Scheduler
  * Plugin URI:        https://github.com/poisl/event-scheduler
  * Description:       Event scheduler can be used for planning of recurring events.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Thomas Poisl
  * Author URI:        https://profiles.wordpress.org/poisl
  * License:           GPL-2.0+
