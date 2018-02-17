@@ -40,7 +40,7 @@ Event Scheduler is available in english and german language. It can easily be tr
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.0.1 =
 * Small fix for accepting and declining events
 
 = 1.0 =
