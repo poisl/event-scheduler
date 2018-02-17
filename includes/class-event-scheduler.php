@@ -70,7 +70,7 @@ class Event_Scheduler {
 		if ( defined( 'EVENT_SCHEDULER_VERSION' ) ) {
 			$this->version = EVENT_SCHEDULER_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.1';
 		}
 		$this->plugin_name = 'event-scheduler';
 
