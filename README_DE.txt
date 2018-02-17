@@ -38,5 +38,8 @@ Event Scheduler ist in Deutsch und Englisch verfügbar und kann mittels POT-Date
 
 == Changelog ==
 
+= 1.0.1 =
+* Kleiner Fix beim Zu- und Absagen von Events
+
 = 1.0 =
 * Initiale Version
