@@ -4,7 +4,7 @@ Donate link: https://profiles.wordpress.org/poisl
 Tags: event, scheduler, planner, planer, sport, participant, mail, notify
 Requires at least: 4
 Tested up to: 4.9.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,7 +38,7 @@ Event Scheduler ist in Deutsch und Englisch verfügbar und kann mittels POT-Date
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.0.2 =
 * Kleiner Fix beim Zu- und Absagen von Events
 
 = 1.0 =
