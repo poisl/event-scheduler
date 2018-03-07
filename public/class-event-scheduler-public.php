@@ -372,6 +372,9 @@ class Event_Scheduler_Public {
 
 			$notify_users = $div->findUndecidedParticipants( $events[0]->uid );
 
+			$admin_email = get_option('admin_email');
+			$admin_info = get_user_by('email', $admin_email);
+
 			foreach ( $notify_users as $row ) {
 				$user_info      = get_userdata( $row->ID );
 				$receiver_email = $user_info->user_email;
@@ -394,9 +397,10 @@ class Event_Scheduler_Public {
 						$decline_url
 					),
 					$options['event_notification_body']
-				) );
+				), ENT_QUOTES);
 
-				$headers = array( 'Content-Type: text/html; charset=UTF-8' );
+				$headers = "Content-Type: text/html; charset=UTF-8" . "\r\n";
+				$headers .= "From: \"" . $admin_info->first_name . " " . $admin_info->last_name . "\" <" . $admin_email . ">" . "\r\n";
 
 				// Send mail
 				wp_mail( $receiver_email, $options['event_notification_subject'], $mail_body, $headers );
