@@ -3,7 +3,7 @@ Contributors: poisl
 Donate link: https://profiles.wordpress.org/poisl
 Tags: event, scheduler, planner, planer, sport, participant, mail, notify
 Requires at least: 4
-Tested up to: 5
+Tested up to: 5.0
 Stable tag: 1.0.2
 Requires PHP: 5.6
 License: GPLv2 or later
