@@ -3,9 +3,9 @@ Contributors: poisl
 Donate link: https://profiles.wordpress.org/poisl
 Tags: event, scheduler, planner, planer, sport, participant, mail, notify
 Requires at least: 4
-Tested up to: 5.1.1
-Stable tag: 1.0.3
-Requires PHP: 5.6
+Tested up to: 5.8
+Stable tag: 1.0.4
+Requires PHP: 7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Die folgenden Shortcodes können auf den Seiten verwendet werden:
 Event Scheduler ist in Deutsch und Englisch verfügbar und kann mittels POT-Datei leicht in weitere Sprachen übersetzt werden.
 
 == Changelog ==
+
+= 1.0.4 =
+* Kompabilität mit WordPress und PHP Versionen aktualisiert.
 
 = 1.0.3 =
 * Ein Problem wurde behoben, dass die korrekte Anzeige der Event- und Mitgliederliste verhindert hat.
