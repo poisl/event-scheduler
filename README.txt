@@ -4,7 +4,7 @@ Donate link: https://profiles.wordpress.org/poisl
 Tags: event, scheduler, planner, planer, sport, participant, mail, notify
 Requires at least: 4
 Tested up to: 5.1.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,9 @@ You can use the following shortcodes on pages:
 Event Scheduler is available in english and german language. It can easily be translated in other languages using the provided POT file.
 
 == Changelog ==
+
+= 1.0.3 =
+* Fixed an issue that could render the event list and member list unusable.
 
 = 1.0.2 =
 * Fix in the mail notification, wordpress admin mail is now used as sender.

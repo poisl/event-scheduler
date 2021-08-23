@@ -303,6 +303,10 @@ class Div
      */
     public function getWordpressUsers($exclude_user_ids = array())
     {
+        // Include file if function does not exist
+        if (!function_exists('is_plugin_active')) {
+            include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        }
         if (is_plugin_active('wp-members/wp-members.php')) {
             // WP-Members plugin is active, so we only get active users
             $wordpress_user_ids = get_users(array(
